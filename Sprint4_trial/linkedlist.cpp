@@ -1,184 +1,244 @@
-#include "linkedlist.h"
+//#include "linkedlist.h"
+//template <class T>
+//LinkedList<T>::LinkedList()
+//{
+//    numElements = 0;
+//    head = new Node<T>();
+//    tail = new Node<T>();
+//    head ->next = tail;
+//    tail-> prev = head;
+//}
 
-template <class T>
+//template <class T>
+//LinkedList<T>::LinkedList(T data)
+//{
+//    numElements = 1;
+//    head = new Node<T>;
+//    tail = new Node<T>;
+//    Node<T> *node = new Node<T>(data, head, tail);
 
-LinkedList<T>::LinkedList()
-{
-    numElements = 0;
-    head = new ListNode<T>();
-    tail = new ListNode<T>();
-}
+//    head -> next = node;
+//    tail -> prev = node;
+//}
 
-template <class T>
-LinkedList<T>::LinkedList(T)
-{
+//template <class T>
+//LinkedList<T>::LinkedList(const LinkedList<T>& llist)
+//{
+//    head = llist.head;
+//    tail = llist.tail;
+//    numElements = llist.numElements;
+//}
 
-}
+//template <class T>
+//typename LinkedList<T>::Iterator * LinkedList<T>::begin()
+//{
+//    Iterator *it = new Iterator(head);
+//    return it;
+//}
 
-template <class T>
-LinkedList<T>::LinkedList(const LinkedList<T>&)
-{
+//template <class T>
+//typename LinkedList<T>::Iterator * LinkedList<T>::end()
+//{
+//    Iterator *it = new Iterator(tail);
+//    return it;
+//}
 
-}
+//template <class T>
+//void LinkedList<T>::remove(int index)
+//{
+//    Node<T> *curr = head;
+//    if(index <= numElements)
+//    {
+//        for (int i = 0; i <= index; i++)
+//            curr = curr -> next;
+//        curr -> prev -> next = curr -> next;
+//        curr -> next-> prev = curr -> prev;
+//        delete curr;
+//        numElements--;
+//    }
+//}
 
-template <class T>
-Iterator<T>* LinkedList<T>::begin()
-{
-    Iterator<T> *it = new Iterator<T>(head);
-    return it;
-}
+//template <class T>
+//void LinkedList<T>::remove(Node<T> node)
+//{
 
-template <class T>
-Iterator<T>* LinkedList<T>::end()
-{
-    Iterator<T> *it = new Iterator<T>(tail);
-    return it;
-}
+//}
 
-template <class T>
-void LinkedList<T>::remove(int index)
-{
-    if(isEmpty())
-    {
-        return false;
-    }
-}
+//template <class T>
+//void LinkedList<T>::removeFront()
+//{
+//    if(!isEmpty())
+//    {
 
-template <class T>
-void LinkedList<T>::remove(ListNode<T> del)
-{
-    if(isEmpty())
-    {
-        return false;
-    }
-    else
-    {
+//    }
+//}
 
-    }
-}
+//template <class T>
+//void LinkedList<T>::removeBack()
+//{
+//    if(!isEmpty())
+//    {
+//        Node<T> *curr = head -> next;
+//        head -> next = curr -> next;
+//        curr -> next -> prev = head;
+//        delete curr;
+//        numElements--;
+//    }
+//}
 
-template <class T>
-void LinkedList<T>::removeFront()
-{
-    if(isEmpty())
-    {
-        return false;
-    }
-}
+//template <class T>
+//void LinkedList<T>::addAt(T& data, int index)
+//{
+//    Node<T> *curr = head;
+//    if(index > 0 && index <= numElements)
+//    {
+//        for (int i = 0; i < index; i++)
+//            if(curr-> next != tail)
+//                curr = curr -> next;
+//    }
+//    Node<T> *newNode = new Node<T>(data);
+//    newNode->next = curr -> next;
+//    newNode -> prev = curr;
+//    curr->next = newNode;
+//    numElements++;
 
-template <class T>
-void LinkedList<T>::removeBack()
-{
-    if(isEmpty())
-    {
-        return false;
-    }
-}
+//}
 
-template <class T>
-void LinkedList<T>::add(T&, int)
-{
+//template <class T>
+//void LinkedList<T>::addToFront(T& data)
+//{
+//    if(isEmpty())
+//    {
+//        Node<T>* newFirst = new Node<T>(data);
+//        head->next = newFirst;
+//        tail->prev = newFirst;
+//    }
+//    else
+//    {
+//        Node<T> * oldFirst = head->next;
+//        Node<T> * newFirst = new Node<T>(data, oldFirst);
+//        oldFirst-> prev = newFirst;
+//        head->next = newFirst;
+//    }
+//}
 
-}
+//template <class T>
+//void LinkedList<T>::addToBack(T& data)
+//{
+//    if(isEmpty())
+//    {
+//        Node<T>* newLast = new Node<T>(data);
+//        head->next = newLast;
+//        tail->prev = newLast;
+//    }
+//    else
+//    {
+//        Node<T> * oldLast = tail->prev;
+//        Node<T> * newLast = new Node<T>(data, nullptr, oldLast);
+//        oldLast-> next = newLast;
+//        tail->prev = newLast;
+//    }
 
-template <class T>
-void LinkedList<T>::addToFront(T& data)
-{
-    if(isEmpty())
-    {
-        ListNode<T>* newFirst = new ListNode<T>(data);
-        head->next = newFirst;
-        tail->prev = newFirst;
-    }
-    else
-    {
-        ListNode<T> * oldFirst = head->next;
-        ListNode<T> * newFirst = new ListNode<T>(data, oldFirst);
-        oldFirst-> prev = newFirst;
-        head->next = newFirst;
-    }
-}
+//}
 
-template <class T>
-void LinkedList<T>::addToBack(T& data)
-{
-    if(isEmpty())
-    {
-        ListNode<T>* newLast = new ListNode<T>(data);
-        head->next = newLast;
-        tail->prev = newLast;
-    }
-    else
-    {
-        ListNode<T> * oldLast = tail->prev;
-        ListNode<T> * newLast = new ListNode<T>(data, nullptr, oldLast);
-        oldLast-> next = newLast;
-        tail->prev = newLast;
-    }
+//template <class T>
+//LinkedList<T>& LinkedList<T>::operator=(LinkedList<T>&)
+//{
 
-}
+//}
 
-template <class T>
-LinkedList<T>& LinkedList<T>::operator=(LinkedList<T>&)
-{
+//template <class T>
+//T& LinkedList<T>::operator[](int)
+//{
 
-}
+//}
 
-template <class T>
-T& LinkedList<T>::operator[](int)
-{
+//template <class T>
+//T LinkedList<T>::get(int index)
+//{
+//    Node<T> *curr = head;
+//    if(index > 0 && index <= numElements)
+//    {
+//        for (int i = 0; i < index; i++)
+//            curr = curr -> next;
+//    }
+//    return curr -> data;
+//}
 
-}
+//template <class T>
+//T LinkedList<T>::first(){
+//    return head -> next -> data;
+//}
 
-template <class T>
-T LinkedList<T>::get(int)
-{
+//template <class T>
+//T LinkedList<T>::last(){
+//    return tail -> prev -> data;
+//}
 
-}
+//template <class T>
+//int LinkedList<T>::size()
+//{
+//    return numElements;
+//}
 
-template <class T>
-int LinkedList<T>::size()
-{
-    return numElements;
-}
+//template <class T>
+//bool LinkedList<T>::isEmpty()
+//{
+//    return (head-> next == nullptr);
+//}
 
-template <class T>
-bool LinkedList<T>::isEmpty()
-{
-    return (head-> next == nullptr);
-}
+//template <class T>
+//void LinkedList<T>::clear()
+//{
+//    while (tail->prev != nullptr)
+//    {
+//        Node<T> * temp = tail->prev;
+//        tail->prev = temp->prev;
+//        delete temp;
+//    }
+//}
 
-template <class T>
-bool LinkedList<T>::clear()
-{
-    while (tail->prev != nullptr)
-    {
-        ListNode<T> * temp = tail->prev;
-        tail->prev = temp->prev;
-        delete temp;
-    }
-}
+//template <class T>
+//LinkedList<T>::~LinkedList()
+//{
+//    clear();
+//    delete head;
+//    delete tail;
+//}
 
-template <class T>
-LinkedList<T>::~LinkedList()
-{
-    clear();
-    delete head;
-    delete tail;
-}
+////template <class T>
+////Iterator::Iterator(Node<T>* node) // constructor from Node*
+////{
 
+////}
 
-/*
-NodeList::Iterator::Iterator(Node* u) // constructor from Node*
-{ v = u; }
-Elem& NodeList::Iterator::operator*() // reference to the element
-{ return v−>elem; } // compare positions
-bool NodeList::Iterator::operator==(const Iterator& p) const
-{ return v == p.v; }
-bool NodeList::Iterator::operator!=(const Iterator& p) const
-{ return v != p.v; } // move to next position
-NodeList::Iterator& NodeList::Iterator::operator++()
-{ v = v−>next; return *this; } // move to previous position
-NodeList::Iterator& NodeList::Iterator::operator−−()
-{ v = v−>prev; return *this; }
-*/
+////template <class T>
+////T& Iterator::operator*()
+////{
+
+////}
+
+////template <class T>
+////bool Iterator::operator==( Iterator& pos)
+////{
+
+////}
+
+////template <class T>
+////bool Iterator::operator!=( Iterator& pos)
+////{
+
+////}
+
+////template <class T>
+////Iterator& Iterator::operator++()
+////{
+
+////}
+
+////template <class T>
+////Iterator& Iterator::operator−−()
+////{
+
+////}
+

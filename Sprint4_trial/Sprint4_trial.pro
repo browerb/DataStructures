@@ -4,9 +4,13 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    linkedlist.cpp
+    linkedlist.cpp \
+    dsstring.cpp \
+    airport.cpp
 
 HEADERS += \
     linkedlist.h \
     queue.h \
-    stack.h
+    stack.h \
+    dsstring.h \
+    airport.h
